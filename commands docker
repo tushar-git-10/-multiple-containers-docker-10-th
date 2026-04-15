@@ -1,2 +1,15 @@
 
 docker compose up --build
+
+
+
+commandas for kubernet 
+
+
+cd ai-hpa
+minikube start --driver=docker
+docker build -t ai-model .
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+kubectl get pods
+minikube service ai-service
