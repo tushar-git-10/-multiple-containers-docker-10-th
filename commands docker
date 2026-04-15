@@ -7,9 +7,15 @@ commandas for kubernet
 
 
 cd ai-hpa
-minikube start --driver=docker
-docker build -t ai-model .
+minikube start
+kubectl get nodes
+
+docker build -t myapp .
+minikube image load myapp
+
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
+
 kubectl get pods
-minikube service ai-service
+
+minikube service myapp-service
