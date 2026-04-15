@@ -49,7 +49,4 @@ echo     environment:>> docker-compose.yml
 echo       MYSQL_ROOT_PASSWORD: root>> docker-compose.yml
 
 echo Running Docker Compose...
-
-docker compose up --build
-
 pause
